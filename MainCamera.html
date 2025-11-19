@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ATC_Pavlodar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="title">ATC_Pavlodar</div>
+
+<div class="container">
+
+  
+  <div class="top-panel">
+    <button onclick="changeDetail(-1)">– ДЕТАЛЬ</button>
+    <button onclick="changeDetail(1)">+ ДЕТАЛЬ</button>
+    <button onclick="changeColor(-1)">◄ ЦВЕТ</button>
+    <button onclick="changeColor(1)">ЦВЕТ ►</button>
+    <button id="revBtn" onclick="toggleReverse()">ИНВЕРСИЯ OFF</button>
+  </div>
+
+
+  <div class="computer">
+    <div id="terminal">
+      <div id="ui">
+        DET:<span id="det">3</span>/5 | COL:<span id="col">GREEN</span> |
+        REV:<span id="rev">OFF</span> | FPS:<span id="fps">0</span>
+      </div>
+      <pre id="screen"></pre>
+      <div class="blink">_</div>
+    </div>
+  </div>
+
+  <div class="bottom-panel">
+    <button onclick="toggle('Glitch')">GLITCH</button>
+    <button onclick="toggle('Noise')">NOISE</button>
+    <button onclick="toggle('Trail')">TRAIL</button>
+    <button onclick="toggle('Scanlines')">SCAN</button>
+  </div>
+</div>
+
+<video id="video" style="display:none" autoplay playsinline muted></video>
+<canvas id="cam" width="640" height="480" style="display:none"></canvas>
+
+<script src="/Atcpvl.js"></script>
+</body>
+</html>
